@@ -12,7 +12,7 @@ Tinytest.addAsync("message-template", function(test, done) {
     test.equal(messages.find({seen: false}).count(), 1);
 
     // render the template
-    UI.insert(UI.render(Template.meteorMessages), document.body);
+    UI.render(Template.meteorMessages, document.body);
 
     // wait a few milliseconds
     Meteor.setTimeout(function() {
