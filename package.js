@@ -16,6 +16,7 @@ Package.on_use(function(api, where) {
 });
 
 Package.on_test(function(api) {
-    api.use(['foundation-flash-messages','tinytest', 'test-helpers'], 'client');  
+    api.use('foundation-flash-messages');
+    api.use(['tinytest', 'test-helpers', 'templating'], 'client');
     api.add_files('messages_tests.js', 'client');
 });
